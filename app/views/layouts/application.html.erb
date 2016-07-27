@@ -14,9 +14,14 @@
 </head>
 <body>
   <div class="container">
-    <div class="row">
+ l   <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <%= yield %>
+
+        <% flash.each do |first_name, message| %>
+        <div><%= message %></div>
+        <% end %>
+
       </div>
     </div>
   </div>
