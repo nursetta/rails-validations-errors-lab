@@ -11,7 +11,7 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(owner_params)
     if @owner.save
-      redirect_to owner_path(owners)
+      redirect_to owner_path(@owner)
 
     else
       flash[:error] = @owner.errors.full_messages
